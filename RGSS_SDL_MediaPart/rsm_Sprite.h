@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include "rsm_bitmap.h"
 #include "rsm_Viewport.h"
+#include "rsm_Tone.h"
 
 class RSM_Viewport;
 
@@ -28,4 +29,5 @@ public:
 	int x;
 	int y;
 	int z;
+	RSM_Tone tone;
 };

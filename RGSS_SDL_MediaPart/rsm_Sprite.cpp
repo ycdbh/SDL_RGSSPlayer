@@ -80,5 +80,11 @@ void RSM_Sprite::update()
 	rt.y = this->y;
 	rt.w = m_bitmap->m_surface->w;
 	rt.h = m_bitmap->m_surface->h;
+	// it should be
+	// SDL_SetRenderDrawColor(g_renderer,tone.red,tone.green,tone.blue,255);
+	// SDL_Texture *texture=SDL_CreateTextureFromSurface(g_renderer,m_bitmap->m_surface);
+	// SDL_RenderCopy(g_renderer,);
+	SDL_SetSurfaceColorMod(m_bitmap->m_surface,tone.red,tone.green,tone.blue);
 	SDL_BlitSurface(m_bitmap->m_surface, NULL, m_viewport->m_surface, &rt);
+	SDL_SetSurfaceColorMod(m_bitmap->m_surface,255,255,255);
 }
