@@ -58,3 +58,7 @@ void RSM_Tone::limit()
     this->green+=255;
     this->gray+=255;
 }
+
+RSM_Tone::~RSM_Tone()
+{
+}

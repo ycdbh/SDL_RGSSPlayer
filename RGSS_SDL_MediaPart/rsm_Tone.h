@@ -1,3 +1,4 @@
+#pragma once
 #include "SDL.h"
 class RSM_Tone
 {
