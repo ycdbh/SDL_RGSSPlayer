@@ -12,7 +12,7 @@ RSM_Font::~RSM_Font()
 {
 	TTF_CloseFont(_font);
 	_font = NULL;
-	_size = NULL;
+	_size = 0;
 }
 
 const char *RSM_Font::name(const char* filename)
@@ -34,5 +34,5 @@ int RSM_Font::size(int size)
 	TTF_CloseFont(_font);
 	_size = size;
 	_font = TTF_OpenFont(_filename, _size);
-	return NULL;
+	return 0;
 }
