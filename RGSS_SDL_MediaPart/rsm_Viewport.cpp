@@ -40,6 +40,8 @@ void RSM_Viewport::del_sprite(RSM_Sprite* sprite)
 
 void RSM_Viewport::update()
 {
+	delete[]m_buffer;
+	m_buffer = new unsigned char[this->width * this->height * 4];
 	std::sort(_spr_list.begin(), _spr_list.end(), [](RSM_Sprite *a, RSM_Sprite *b) { return a->z > b->z; }); // < = ÉıĞò | > = ½µĞò
 	for (auto iter = _spr_list.begin(); iter != _spr_list.end(); iter++)
 		(*iter)->update();
